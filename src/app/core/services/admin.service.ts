@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 
 export class AdminService{
+    
     private apiUrl = "http://localhost:8085/user/list";
 
     constructor(private http: HttpClient){}

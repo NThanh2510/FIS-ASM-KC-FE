@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { SignUpService } from '../../../core/services/sign-up.servece';
+
+import { AuthService } from '../../../core/services/auth.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -15,7 +16,7 @@ export class SignUpComponent implements OnInit{
 
   constructor(
     private fb: FormBuilder,
-    private signUpService: SignUpService,
+    private authService: AuthService,
     private router: Router
   ) {
   }
@@ -48,7 +49,7 @@ export class SignUpComponent implements OnInit{
  
  onSubmit(){
   const { username, password, email, firstName, lastName } = this.signUpForm.value;
-  this.signUpService.signUp(username, password, email, firstName, lastName).subscribe(
+  this.authService.signUp(username, password, email, firstName, lastName).subscribe(
     (response) => {
       console.log('Đăng ký thành công:', response);
       this.router.navigate(['/Sign-in'])

@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BodyComponent } from './modules/body/body.component';
 import { SidenavComponent } from './modules/sidenav/sidenav.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
-import { ProductsComponent } from './modules/products/products.component';
 import { AdminComponent } from './auth/page/admin/admin.component';
 import { StaffComponent } from './modules/staff/staff.component';
 import { HeaderComponent } from './modules/header/header.component';
@@ -31,7 +30,6 @@ import { SignUpComponent } from './auth/page/sign-up/sign-up.component';
     BodyComponent,
     SidenavComponent,
     DashboardComponent,
-    ProductsComponent,
     AdminComponent,
     StaffComponent,
     AuthComponent,

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { SignInService } from '../../../core/services/sign-in.service';
+
 import { Router } from '@angular/router';
+import { AuthService } from '../../../core/services/auth.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -17,7 +18,7 @@ export class SignInComponent implements OnInit{
 
   constructor(
     private fb: FormBuilder,
-    private signInService: SignInService,
+    private authService: AuthService,
     private router: Router
   ) {
     this.loginForm = this.fb.group({
@@ -37,7 +38,7 @@ get password() {
  
  onSubmit(){
   const { username, password } = this.loginForm.value;
-  this.signInService.login(username, password).subscribe(
+  this.authService.login(username, password).subscribe(
   (response) => {
     console.log("dang nhap thanh cong", response);
     this.router.navigate(['/dashboard'])

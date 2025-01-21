@@ -5,7 +5,7 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { StaffComponent } from './modules/staff/staff.component';
 import { AdminComponent } from './auth/page/admin/admin.component';
 
-import { ProductsComponent } from './modules/products/products.component';
+
 import { SignInComponent } from './auth/page/sign-in/sign-in.component';
 import { SignOutComponent } from './auth/page/sign-out/sign-out.component';
 import { SignUpComponent } from './auth/page/sign-up/sign-up.component';

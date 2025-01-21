@@ -1,1 +1,37 @@
-<p>staff works!</p>
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+      <h2 class="text-center mb-4">Thông Tin Người Dùng</h2>
+      <form (ngSubmit)="onSubmit()">
+
+        <div class="mb-3">
+          <label class="form-label">Tên đăng nhập:</label>
+          <input type="text" class="form-control" [(ngModel)]="userData.username" name="username" disabled />
+        </div>
+ 
+        <div class="mb-3">
+          <label class="form-label">Tên:</label>
+          <input type="text" class="form-control" [(ngModel)]="userData.firstName" name="firstName" />
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label">Họ:</label>
+          <input type="text" class="form-control" [(ngModel)]="userData.lastName" name="lastName" />
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label">Email:</label>
+          <input type="email" class="form-control" [(ngModel)]="userData.email" name="email" disabled />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Ngày sinh:</label>
+          <input type="date" class="form-control" [(ngModel)]="userData.dob" name="dob" disabled />
+        </div>
+  
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Xác nhận</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
