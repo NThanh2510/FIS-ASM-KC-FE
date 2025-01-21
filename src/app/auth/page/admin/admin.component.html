@@ -1,0 +1,32 @@
+<div *ngIf="hasNoAccess" class="alert alert-danger">
+  <h1> Bạn không có quyền truy cập</h1>
+</div>
+
+<div *ngIf="!hasNoAccess" class="container mt-5">
+  <h2>Thông tin người dùng</h2>
+
+  <!-- Kiểm tra nếu dataList có dữ liệu để hiển thị bảng -->
+  <table  class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Tài khoản</th>
+        <th scope="col">Họ</th>
+        <th scope="col">Tên</th>
+        <th scope="col">Email</th>
+        <th scope="col">Ngày đăng ký</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of dataList">
+        <td>{{ user.username }}</td>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.dob }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Nếu không có dữ liệu trong dataList, hiển thị thông báo -->
+ 
+</div>
